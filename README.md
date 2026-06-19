@@ -22,7 +22,7 @@
 
 <!-- ═══════════════════════════════════════════════════════════ -->
 
-## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anis/Animated-Fluent-Emojis/master/Emojis/People%20with%20professions/Man%20Technologist%20Light%20Skin%20Tone.png" width="28"/> &nbsp;Обо мне
+## 👨‍💻 &nbsp;Обо мне
 
 ```yaml
 name:       Григорий Романов
