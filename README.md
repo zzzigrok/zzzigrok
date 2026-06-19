@@ -182,15 +182,28 @@ flowchart TB
         REP["🎨 Repin 2.0\nGAN арт-студия\nGlassmorphism UI"]
     end
 
+    subgraph TELEGRAM["🤖 TELEGRAM DEV-STACK"]
+        direction TB
+        TGV["🗄️ TG-Vault\nS3-прокси для хранилища\nповерх Telegram"]
+        TMK["🧪 TeleMock\nЛокальный эмулятор\nTelegram Bot API"]
+        TLM["📊 TeleMetric\nМониторинг для\nTelegram-ботов"]
+    end
+
     T21 <-->|"🔗 API"| CLI
     CLI -->|"📊 Модели"| PYT
     CLI -->|"🖼️ Генерация"| REP
+    TMK -->|"🧪 Тестирование"| TLM
+    TGV -->|"📦 Хранение"| TMK
 
     style ECOSYSTEM fill:#0d1117,stroke:#58A6FF,stroke-width:2px,color:#e6edf3
     style T21 fill:#161b22,stroke:#1f6feb,stroke-width:2px,color:#e6edf3
     style CLI fill:#161b22,stroke:#238636,stroke-width:2px,color:#e6edf3
     style PYT fill:#161b22,stroke:#a371f7,stroke-width:2px,color:#e6edf3
     style REP fill:#161b22,stroke:#f78166,stroke-width:2px,color:#e6edf3
+    style TELEGRAM fill:#0d1117,stroke:#2CA5E0,stroke-width:2px,color:#e6edf3
+    style TGV fill:#161b22,stroke:#2CA5E0,stroke-width:2px,color:#e6edf3
+    style TMK fill:#161b22,stroke:#9B59B6,stroke-width:2px,color:#e6edf3
+    style TLM fill:#161b22,stroke:#E67E22,stroke-width:2px,color:#e6edf3
 ```
 
 <table>
@@ -266,6 +279,65 @@ flowchart TB
 
 ---
 
+### 🤖 Telegram Dev-инструменты
+
+> Набор Go-библиотек для полного цикла разработки Telegram-ботов: от эмуляции API в тестах до продакшн-мониторинга и бесконечного хранилища.
+
+<table>
+<tr>
+<td width="33%">
+
+#### 🗄️ [TG-Vault](https://github.com/zzzigrok/tg-vault)
+> S3-прокси для бесконечного файлового хранилища поверх Telegram
+
+<p>
+  <img src="https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white"/>
+  <img src="https://img.shields.io/badge/S3_API-FF9900?style=flat-square&logo=amazons3&logoColor=white"/>
+  <img src="https://img.shields.io/badge/MIT-green?style=flat-square"/>
+</p>
+
+Превращает приватный Telegram-канал в безлимитное S3-хранилище. Динамический chunking файлов любого размера, потоковый стриминг, S3-совместимый слой для AWS CLI / Cyberduck, BBolt для метаданных, Docker-образ < 20 МБ.
+
+`S3` `Chunking` `Telegram` `Storage`
+
+</td>
+<td width="33%">
+
+#### 🧪 [TeleMock](https://github.com/zzzigrok/telemock)
+> Локальный эмулятор Telegram Bot API для автоматизации тестирования
+
+<p>
+  <img src="https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white"/>
+  <img src="https://img.shields.io/badge/MIT-green?style=flat-square"/>
+</p>
+
+Полная замена `api.telegram.org` в локальном контуре. Эмуляция 10 методов Bot API, инъекция ошибок 429/500, webhooks с пулом воркеров, long polling, Prometheus-метрики. Образ < 15 МБ, < 2ms latency.
+
+`Emulator` `Testing` `Mocking` `CI/CD`
+
+</td>
+<td width="33%">
+
+#### 📊 [TeleMetric](https://github.com/zzzigrok/telemetric)
+> Встроенный модуль мониторинга для Telegram-ботов
+
+<p>
+  <img src="https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white"/>
+  <img src="https://img.shields.io/badge/0_deps-success?style=flat-square"/>
+  <img src="https://img.shields.io/badge/MIT-green?style=flat-square"/>
+</p>
+
+Drop-in библиотека с нулевыми зависимостями. RPS через кольцевой буфер, EMA-латенси, счётчики ошибок/паник, метрики рантайма Go, дампы горутин через pprof — всё в Telegram-native UI с inline-кнопками.
+
+`Monitoring` `Telemetry` `RPS` `Zero-alloc`
+
+</td>
+</tr>
+</table>
+
+---
+
 ### 🔧 Инженерные инструменты
 
 <table>
@@ -280,9 +352,9 @@ flowchart TB
   <img src="https://img.shields.io/badge/MIT-green?style=flat-square"/>
 </p>
 
-Инъекция задержек, сброс соединений и ограничение полосы без перезапуска — через REST API или CLI. Идеально для тестирования отказоустойчивости микросервисов и chaos-экспериментов в CI.
+Инъекция задержек, сброс соединений и ограничение полосы без перезапуска — через REST API или CLI. Идеально для chaos-экспериментов в CI.
 
-`TCP` `HTTP` `Chaos Engineering` `Fault Injection`
+`TCP` `HTTP` `Chaos Engineering`
 
 </td>
 <td width="33%">
@@ -295,7 +367,7 @@ flowchart TB
   <img src="https://img.shields.io/badge/MIT-green?style=flat-square"/>
 </p>
 
-HTTP/2, ротация прокси, Playwright fallback, экспорт в CSV/XLSX. Архитектура plug-and-play: добавь новый источник за один класс-наследник.
+HTTP/2, ротация прокси, Playwright fallback, экспорт в CSV/XLSX. Plug-and-play архитектура.
 
 `asyncio` `httpx` `Playwright` `Scraping`
 
@@ -310,7 +382,7 @@ HTTP/2, ротация прокси, Playwright fallback, экспорт в CSV/
   <img src="https://img.shields.io/badge/MIT-green?style=flat-square"/>
 </p>
 
-Найди мёртвые проекты, очисти кэш зависимостей, освободи место на диске. Анализирует `.git`, `node_modules`, `__pycache__`, `target/` и другие хранилища мусора.
+Найди мёртвые проекты, очисти кэш зависимостей, освободи место. Анализирует `.git`, `node_modules`, `__pycache__` и другой мусор.
 
 `CLI` `DevTools` `Automation`
 
