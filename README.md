@@ -49,31 +49,31 @@ philosophy:  "Building things that think"
 В свободное время ковыряюсь в высшей математике, оптимизирую алгоритмы и пишу инженерные инструменты — от chaos-прокси до парсеров. Считаю, что хороший AI-engineer должен уметь и обучать сеть, и развернуть её в проде, и написать CLI, которым будет приятно пользоваться. Если вы разделяете этот подход — давайте знакомиться.
 
 <table>
-  <tr>
-    <td>🔭</td>
-    <td><b>Сейчас развиваю</b></td>
-    <td><code>Tolstoy AI Studio</code> — комплексную экосистему для русскоязычных LLM</td>
-  </tr>
-  <tr>
-    <td>🧠</td>
-    <td><b>В фокусе</b></td>
-    <td>llama.cpp, MoE, GQA, RoPE, Transformer-архитектуры, GAN</td>
-  </tr>
-  <tr>
-    <td>🎓</td>
-    <td><b>Интересы</b></td>
-    <td>Высшая математика, проектирование AI-систем, оптимизация алгоритмов</td>
-  </tr>
-  <tr>
-    <td>⚡</td>
-    <td><b>Инструменты</b></td>
-    <td>WSL 2, CMake, OpenRouter API, Polza.ai</td>
-  </tr>
-  <tr>
-    <td>🤝</td>
-    <td><b>Открыт к</b></td>
-    <td>Коллаборациям по open-source AI, локальным LLM и dev-tools</td>
-  </tr>
+<tr>
+<td>🔭</td>
+<td><b>Сейчас развиваю</b></td>
+<td><code>Tolstoy AI Studio</code> — комплексную экосистему для русскоязычных LLM</td>
+</tr>
+<tr>
+<td>🧠</td>
+<td><b>В фокусе</b></td>
+<td>llama.cpp, MoE, GQA, RoPE, Transformer-архитектуры, GAN</td>
+</tr>
+<tr>
+<td>🎓</td>
+<td><b>Интересы</b></td>
+<td>Высшая математика, проектирование AI-систем, оптимизация алгоритмов</td>
+</tr>
+<tr>
+<td>⚡</td>
+<td><b>Инструменты</b></td>
+<td>WSL 2, CMake, OpenRouter API, Polza.ai</td>
+</tr>
+<tr>
+<td>🤝</td>
+<td><b>Открыт к</b></td>
+<td>Коллаборациям по open-source AI, локальным LLM и dev-tools</td>
+</tr>
 </table>
 
 <!-- ═══════════════════════════════════════════════════════════ -->
@@ -81,8 +81,8 @@ philosophy:  "Building things that think"
 ## 📚 Сейчас изучаю
 
 <table>
-  <tr>
-    <td width="50%">
+<tr>
+<td width="50%">
 
 **📄 Паперы**
 - *Mixture-of-Experts* — DeepSeek-V3, Mixtral
@@ -90,8 +90,8 @@ philosophy:  "Building things that think"
 - *Efficient fine-tuning* — QLoRA, DoRA, GaLore
 - *Speculative decoding* — Medusa, EAGLE-2
 
-    </td>
-    <td width="50%">
+</td>
+<td width="50%">
 
 **🛠 Технологии**
 - `vLLM` и `sglang` — high-throughput inference
@@ -99,18 +99,18 @@ philosophy:  "Building things that think"
 - `ONNX Runtime` — кросс-платформенный инференс
 - `Rust` — системное программирование для AI-tools
 
-    </td>
-  </tr>
-  <tr>
-    <td width="50%">
+</td>
+</tr>
+<tr>
+<td width="50%">
 
 **📖 Книги**
 - *Designing Machine Learning Systems* — Chip Huyen
 - *Deep Learning* — Goodfellow, Bengio, Courville
 - *Build a Large Language Model (From Scratch)* — Sebastian Raschka
 
-    </td>
-    <td width="50%">
+</td>
+<td width="50%">
 
 **🎯 Практики**
 - Квантизация INT4/INT8 без потери качества
@@ -118,8 +118,8 @@ philosophy:  "Building things that think"
 - Реализация attention с нуля на CUDA/Triton
 - End-to-end RLHF/DPO пайплайны
 
-    </td>
-  </tr>
+</td>
+</tr>
 </table>
 
 <!-- ═══════════════════════════════════════════════════════════ -->
@@ -327,8 +327,8 @@ HTTP/2, ротация прокси, Playwright fallback, экспорт в CSV/
 Эти принципы направляют каждое архитектурное решение в моих проектах:
 
 <table>
-  <tr>
-    <td width="50%">
+<tr>
+<td width="50%">
 
 **🏠 Local-first.** Модель и данные должны работать на машине пользователя. Облако — опция, не требование. Если инструмент ломается без интернета — это плохой инструмент.
 
@@ -336,8 +336,8 @@ HTTP/2, ротация прокси, Playwright fallback, экспорт в CSV/
 
 **📉 Cost-aware.** Каждый токен имеет цену. Локальный инференс = предсказуемая стоимость без сюрпризов в конце месяца и без rate-limit'ов.
 
-    </td>
-    <td width="50%">
+</td>
+<td width="50%">
 
 **🔬 Reproducible.** Один seed → один результат. Препроцессинг, токенизация, веса — всё версионируется и логируется. Эксперимент без логов — не эксперимент.
 
@@ -345,8 +345,8 @@ HTTP/2, ротация прокси, Playwright fallback, экспорт в CSV/
 
 **⚙️ Pragmatic C++.** Когда PyTorch медленный — спускаюсь на уровень C++/CUDA. Когда не медленный — не спускаюсь. Инженерия, а не религия.
 
-    </td>
-  </tr>
+</td>
+</tr>
 </table>
 
 <!-- ═══════════════════════════════════════════════════════════ -->
@@ -390,26 +390,26 @@ HTTP/2, ротация прокси, Playwright fallback, экспорт в CSV/
 > Открыт к коллаборациям по open-source AI, локальным LLM, dev-tools и инструментам для русскоязычного AI-комьюнити.
 
 <table>
-  <tr>
-    <td width="33%" align="center">
+<tr>
+<td width="33%" align="center">
 
 **🤝 Help wanted**
 В репозиториях Tolstoy AI Studio размечаю issues `help wanted` — приходите контрибьютить, объясню контекст.
 
-    </td>
-    <td width="33%" align="center">
+</td>
+<td width="33%" align="center">
 
 **💬 Обсудим**
 LLM-обучение, квантизация, локальный инференс — пишите в Telegram, отвечаю всем без исключения.
 
-    </td>
-    <td width="33%" align="center">
+</td>
+<td width="33%" align="center">
 
 **🚀 Менторство**
 Готов подсказать новичкам, которые входят в локальные LLM и хотят собирать свои модели с нуля.
 
-    </td>
-  </tr>
+</td>
+</tr>
 </table>
 
 <!-- ═══════════════════════════════════════════════════════════ -->
