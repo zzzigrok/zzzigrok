@@ -5,7 +5,7 @@
 
 <!-- Анимированный текст -->
 <a href="https://git.io/typing-svg">
-  <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=600&size=22&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&multiline=true&repeat=true&random=false&width=720&height=110&lines=%F0%9F%A7%A0+Building+things+that+think;%F0%9F%87%B7%F0%9F%87%BA+Developing+Russian-language+AI+ecosystem;%F0%9F%94%A7+From+training+to+inference+%E2%80%94+on+consumer+hardware;%F0%9F%92%A1+Local+first.+Cloud-free.+Open+by+design." alt="Typing SVG" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=600&size=22&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&multiline=true&repeat=true&random=false&width=720&height=110&lines=%F0%9F%A7%A0+Building+thinking+AI;%F0%9F%87%B7%F0%9F%87%BA+Russian+AI+ecosystem;%F0%9F%94%A7+AI+on+consumer+hardware;%F0%9F%92%A1+Local.+Cloud-free.+Open." alt="Typing SVG" />
 </a>
 
 <!-- Статус -->
