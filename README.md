@@ -33,7 +33,7 @@
 ## 👨‍💻 Обо мне
 
 ```yaml
-name:        Григорий Романов
+name:        Григорий
 location:    Москва, Россия 🇷🇺
 role:        AI Engineer & LLM Developer
 focus:       Local-first AI / Russian-language LLMs
