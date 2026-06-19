@@ -19,7 +19,6 @@
   <a href="https://t.me/ultrahyperus"><img src="https://img.shields.io/badge/Telegram-@ultrahyperus-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram"/></a>
   <a href="mailto:takeshelgaas@gmail.com"><img src="https://img.shields.io/badge/Gmail-takeshelgaas-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/></a>
   <a href="https://github.com/zzzigrok"><img src="https://img.shields.io/badge/GitHub-zzzigrok-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/></a>
-  <a href="https://polza.ai"><img src="https://img.shields.io/badge/Polza.ai-7C3AED?style=for-the-badge&logo=rocket&logoColor=white" alt="Polza.ai"/></a>
 </p>
 
 <!-- Счётчик посещений -->
