@@ -27,7 +27,6 @@
 ```yaml
 name:       Григорий Романов
 location:   Москва, Россия 🇷🇺
-education:  Технологический университет им. Леонова
 role:       AI Engineer & LLM Developer
 philosophy: "Building things that think"
 ```
