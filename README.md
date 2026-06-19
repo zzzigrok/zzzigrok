@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- Волновой баннер -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,25:161b22,50:1f6feb,75:238636,100:0d1117&height=220&section=header&text=Grigoriy%20Romanov&fontSize=48&fontColor=e6edf3&animation=fadeIn&fontAlignY=32&desc=AI%20Engineer%20%E2%80%A2%20Local%20LLM%20Builder%20%E2%80%A2%20Open%20Source%20Creator&descAlignY=56&descSize=17&descColor=8b949e" width="100%" alt="header"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,25:161b22,50:1f6feb,75:238636,100:0d1117&height=220&section=header&text=Grigoriy%20&fontSize=48&fontColor=e6edf3&animation=fadeIn&fontAlignY=32&desc=AI%20Engineer%20%E2%80%A2%20Local%20LLM%20Builder%20%E2%80%A2%20Open%20Source%20Creator&descAlignY=56&descSize=17&descColor=8b949e" width="100%" alt="header"/>
 
 <!-- Анимированный текст -->
 <a href="https://git.io/typing-svg">
