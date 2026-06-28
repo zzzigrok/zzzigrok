@@ -187,6 +187,8 @@ flowchart TB
         TGV["🗄️ TG-Vault\nS3-прокси для хранилища\nповерх Telegram"]
         TMK["🧪 TeleMock\nЛокальный эмулятор\nTelegram Bot API"]
         TLM["📊 TeleMetric\nМониторинг для\nTelegram-ботов"]
+        TPC["🧠 TelePromptCache\nСемантический кэш\nLLM-ответов"]
+        MGO["💇 MasterGo\nCRM для бьюти-мастеров\nTelegram Mini App"]
     end
 
     T21 <-->|"🔗 API"| CLI
@@ -194,6 +196,7 @@ flowchart TB
     CLI -->|"🖼️ Генерация"| REP
     TMK -->|"🧪 Тестирование"| TLM
     TGV -->|"📦 Хранение"| TMK
+    TPC -->|"⚡ Кэш"| MGO
 
     style ECOSYSTEM fill:#0d1117,stroke:#58A6FF,stroke-width:2px,color:#e6edf3
     style T21 fill:#161b22,stroke:#1f6feb,stroke-width:2px,color:#e6edf3
@@ -204,6 +207,8 @@ flowchart TB
     style TGV fill:#161b22,stroke:#2CA5E0,stroke-width:2px,color:#e6edf3
     style TMK fill:#161b22,stroke:#9B59B6,stroke-width:2px,color:#e6edf3
     style TLM fill:#161b22,stroke:#E67E22,stroke-width:2px,color:#e6edf3
+    style TPC fill:#161b22,stroke:#27AE60,stroke-width:2px,color:#e6edf3
+    style MGO fill:#161b22,stroke:#E91E63,stroke-width:2px,color:#e6edf3
 ```
 
 <table>
@@ -281,7 +286,7 @@ flowchart TB
 
 ### 🤖 Telegram Dev-инструменты
 
-> Набор Go-библиотек для полного цикла разработки Telegram-ботов: от эмуляции API в тестах до продакшн-мониторинга и бесконечного хранилища.
+> Набор Go-библиотек и приложений для полного цикла разработки Telegram-ботов и Mini App: от эмуляции API в тестах до продакшн-мониторинга, семантического кэширования и бесконечного хранилища.
 
 <table>
 <tr>
@@ -332,6 +337,42 @@ Drop-in библиотека с нулевыми зависимостями. RPS
 
 `Monitoring` `Telemetry` `RPS` `Zero-alloc`
 
+</td>
+</tr>
+<tr>
+<td width="33%">
+
+#### 🧠 [TelePromptCache](https://github.com/zzzigrok/telepromptcache)
+> Семантический кэш для LLM-ответов в Telegram-ботах
+
+<p>
+  <img src="https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white"/>
+  <img src="https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white"/>
+  <img src="https://img.shields.io/badge/MIT-green?style=flat-square"/>
+</p>
+
+Перехватывает запросы, ищет семантический дубликат в in-memory индексе и возвращает ответ без вызова LLM. Параллельный vector scan, L2-нормализация (DotProduct ~3× быстрее), LRU-вытеснение, multi-tenancy, pure-Go SQLite без CGO.
+
+`Semantic Cache` `Vector Search` `LLM` `Cost Saving`
+
+</td>
+<td width="33%">
+
+#### 💇 [MasterGo](https://github.com/zzzigrok/mastergo)
+> Self-hosted CRM для бьюти-мастеров на Telegram Mini App
+
+<p>
+  <img src="https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Preact-673AB7?style=flat-square&logo=preact&logoColor=white"/>
+  <img src="https://img.shields.io/badge/MIT-green?style=flat-square"/>
+</p>
+
+Один Go-бинарник со встроенным Preact-фронтендом и SQLite. Онлайн-запись клиентов, сетка слотов, аналитика выручки, cron-напоминания, HMAC-валидация initData, Docker-образ ~8 МБ.
+
+`Telegram Mini App` `CRM` `Preact` `SQLite`
+
+</td>
+<td width="33%">
 </td>
 </tr>
 </table>
